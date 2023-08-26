@@ -15,10 +15,10 @@ x = vertices[:, 0]
 y = vertices[:, 1]
 z = vertices[:, 2]
 
-# x_range = np.linspace(min(x), max(x), 40)
-x_range = np.linspace(0, max(x), 10)
-# y_range = np.linspace(min(y), max(y), 120)
-y_range = np.linspace(min(y), 0, 30)
+x_range = np.linspace(min(x), max(x), 30)
+
+y_range = np.linspace(min(y), max(y), 100)
+
 X, Y = np.meshgrid(x_range, y_range)
 
 # rbf = Rbf(x, y, z, function='cubic', smooth=10)
