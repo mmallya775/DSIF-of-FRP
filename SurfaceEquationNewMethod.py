@@ -33,7 +33,7 @@ y = vertices[:, 1]
 z = vertices[:, 2]
 
 x_range = np.linspace(min(x), max(x), 25)
-y_range = np.linspace(min(y), max(y), 70)
+y_range = np.linspace(min(y), max(y), 25)
 
 
 X, Y = np.meshgrid(x_range, y_range)

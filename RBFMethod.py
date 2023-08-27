@@ -26,7 +26,7 @@ x = vertices[:, 0]
 y = vertices[:, 1]
 z = vertices[:, 2]
 
-num_points = 30
+num_points = 35
 xi = np.linspace(min(x), max(x), num_points)
 yi = np.linspace(min(y), max(y), num_points)
 XI, YI = np.meshgrid(xi, yi)
