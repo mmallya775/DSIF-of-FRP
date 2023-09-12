@@ -36,7 +36,9 @@ ax = fig.add_subplot(111, projection='3d')
 ax.scatter(xi, yi, zi, s=1, label=f'Interpolated Points at Z = {z_value}', c='b')
 
 # Plot the original point cloud
-ax.scatter(hemisphere_vertices[:, 0], hemisphere_vertices[:, 1], hemisphere_vertices[:, 2], s=1, label='Original Point Cloud', c='r')
+ax.scatter(hemisphere_vertices[:, 0], hemisphere_vertices[:, 1], hemisphere_vertices[:, 2], s=1, label='Original '
+                                                                                                       'Point Cloud',
+           c='r')
 
 ax.set_xlabel('X')
 ax.set_ylabel('Y')

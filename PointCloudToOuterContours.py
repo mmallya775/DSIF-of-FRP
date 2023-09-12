@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans
 
 filename = 'model1.stl'
 mesh = trimesh.load_mesh(filename)
-number_of_sampled_points = 50000
+number_of_sampled_points = 100000
 pointcloud, _ = trimesh.sample.sample_surface_even(mesh, number_of_sampled_points)
 
 global_selected_points = []
@@ -24,7 +24,7 @@ z_int = np.linspace(min(z), max(z), math.ceil(number_of_layers))
 for z_lay in z_int:
     x_r, y_r, z_r = [], [], []
     for i in range(len(x)):
-        if z[i] - 1 < z_lay < z[i] + 1:
+        if z[i] - 0.5 < z_lay < z[i] + 0.5:
             x_r.append(x[i])
             y_r.append(y[i])
             z_r.append(z_lay)
@@ -46,8 +46,8 @@ for z_lay in z_int:
 
 common_array = np.asarray(global_selected_points)
 
-fig = plt.figure()
+fig = plt.figure(figsize=(16, 9))
 # ax = fig.add_subplot(projection='3d')
-ax = plt.axes(projection='3d')
-ax.scatter(common_array[:, 0], common_array[:, 1], common_array[:, 2], marker='o')
+ax1 = plt.axes(projection='3d')
+ax1.scatter(common_array[:, 0], common_array[:, 1], common_array[:, 2], marker='o', c='r')
 plt.show()
